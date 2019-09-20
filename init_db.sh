@@ -42,7 +42,10 @@ if [ ${DB_ENGINE} == 'postgresql' ]; then
     sed -i "s/XX_DB_USERPW/${DB_USERPW}/g" ./init_db_psql.sql
 
     PGPASSWORD=$POSTGRES_PASSWORD psql -U postgres -h ldhost < init_db_psql.sql
-    PGPASSWORD=$POSTGRES_PASSWORD psql -U postgres -h ldhost -d ${DB_NAME} -f logical_postgres.sql
+    PGPASSWORD=$POSTGRES_PASSWORD psql -U postgres -h ldhost -f logical_postgres.sql -d ${DB_NAME}
+
+    docker exec -it ldhost sed -i "s!host    all             all             127.0.0.1/32            trust!&\nhost    all             all             127.0.0.1/24            trust!" /var/lib/postgresql/data/pg_hba.conf
+    docker restart ldhost
 fi
 
 # docker build --no-cache -t logicaldoc .
