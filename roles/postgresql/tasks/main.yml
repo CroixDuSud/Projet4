@@ -5,6 +5,7 @@
             #env_file: /home/formation/autom2/a2projet4/group_vars/mysql.yml
             image: postgres:9.6-alpine
             state: started
+            ports: 5432:5432
             env:
               ENV POSTGRES_PASSWORD: root
             tty: yes

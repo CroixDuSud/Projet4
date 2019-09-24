@@ -5,6 +5,7 @@
             #env_file: /home/formation/autom2/a2projet4/group_vars/mysql.yml
             image: mysql:5.7
             state: started
+            ports: 3306:3306
             env:
               MYSQL_ROOT_PASSWORD: root
               MYSQL_ROOT_HOST: '%'
