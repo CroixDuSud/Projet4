@@ -4,7 +4,7 @@
         name: logicaldoc
         build:
           args:
-          path: ${WORKSPACE}/Dockerfile
+          path: https://github.com/CroixDuSud/Projet4.git
           dockerfile: Dockerfile
           state: present
           source: build
