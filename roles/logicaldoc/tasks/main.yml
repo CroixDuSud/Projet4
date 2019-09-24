@@ -19,7 +19,7 @@
         tty: yes
         pull: no
         env:
-          DB_ENGINE: mysql
+          DB_ENGINE: "{{ sgbd }}" #mysql
           DB_NAME: logicaldoc
           DB_USERNAME: ldoc
           DB_USERPW: picon
