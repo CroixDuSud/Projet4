@@ -2,7 +2,6 @@
     - name: "Deploiement de Mysql"
       docker_container:
             name: ldhost
-            #env_file: /home/formation/autom2/a2projet4/group_vars/mysql.yml
             image: mysql:5.7
             state: started
             ports: 3306:3306

@@ -4,6 +4,6 @@
   
   roles:
     - network
-    - "{{ sgbd }}"   #mysql
+    - "{{ sgbd }}"
     - exportDockerfile
     - logicaldoc
