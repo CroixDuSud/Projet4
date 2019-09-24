@@ -1,0 +1,9 @@
+---
+# tasks file for network
+- name: Mise en place du réseau
+  docker_network:
+    name: subnet1
+    ipam_config:
+            - gateway: 10.0.0.254
+              iprange: 10.0.0.0/24
+              subnet: 10.0.0.0/24

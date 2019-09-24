@@ -1,0 +1,32 @@
+---
+    - name: Build de l'image logicaldoc
+      docker_image:
+        name: logicaldoc
+        build:
+          args:
+          path: .
+          dockerfile: Dockerfile
+          state: present
+          source: build
+          nocache: true
+
+    - name: lancement d'un conteneur logicaldoc
+      docker_container:
+        name: ldoc
+        image: logicaldoc:latest
+        ports: 8080:8080
+        state: started
+        tty: yes
+        pull: no
+        env:
+          DB_ENGINE: mysql
+          DB_NAME: logicaldoc
+          DB_USERNAME: ldoc
+          DB_USERPW: picon
+          MYSQL_ROOT_PASSWORD: root
+          MYSQL_ROOT_HOST: '%'
+          POSTGRES_PASSWORD: root
+        links: "ldhost:ldhost"
+        networks:
+          - name: subnet1
+            ipv4_address: 10.0.0.2

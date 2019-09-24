@@ -1,0 +1,28 @@
+---
+    - name: Préparation de l'environnement
+      hosts: cluster1
+      tasks: 
+        - name: Installation de Python
+          apt:
+            name: "{{ item }}"
+            state: installed
+            force: yes
+          with_items:
+            - python
+            - python-py
+            - python-pip
+        - name: Installation de Docker
+          apt:
+            name: docker
+            state: installed
+            force: yes
+        - name: Installation d'Ansible (via pip)
+          pip:
+            name: ansible
+            state: installed
+            force: yes
+        - name: Installation d'Ansible (via apt)
+          apt:
+            name: ansible
+            state: installed
+            force: yesa
