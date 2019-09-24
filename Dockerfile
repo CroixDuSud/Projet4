@@ -2,7 +2,7 @@ FROM tomcat:9.0-jdk11-openjdk-slim
 
 ENV DB_ENGINE mysql
 ENV DB_NAME logicaldoc
-ENV DB_USERNAME logicaldoc
+ENV DB_USERNAME ldoc
 ENV DB_USERPW picon
 ENV MYSQL_ROOT_PASSWORD root
 ENV MYSQL_ROOT_HOST %
@@ -22,11 +22,11 @@ EXPOSE 8080
 
 WORKDIR /usr/local/tomcat/bin
 
-COPY init_db.sh .
-COPY init_db.sql .
-COPY init_db_psql.sql .
-COPY logical_mysql.sql .
-COPY logical_postgres.sql .
+COPY scripts_sh/init_db.sh .
+COPY scripts_sql/init_db.sql .
+COPY scripts_sql/init_db_psql.sql .
+COPY scripts_sql/logical_mysql.sql .
+COPY scripts_sql/logical_postgres.sql .
 RUN chmod +x init_db.sh
 
 CMD  init_db.sh; startup.sh && tail -F /var/log/logicaldoc/error.log
