@@ -11,5 +11,5 @@
             pull: yes
             networks:
               - name: subnet1
-                ipv4_address: 10.0.0.0/24
+                #ipv4_address: 10.0.0.4
             volumes: "volume_postgres:/var/lib/postgresql"
