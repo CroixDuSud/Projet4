@@ -1,0 +1,4 @@
+[recette]
+198.168.102.81 ansible_host=192.168.102.81 ansible_ssh_user=formation ansible_ssh_pass=@FCEQL1
+[prod]
+127.0.0.1   ansible_connection=local
