@@ -1,6 +1,6 @@
 - name: deploiement de logicaldoc et mysql
   strategy: free
-  hosts: machine_distante
+  hosts: vm
   
   roles:
     - network
