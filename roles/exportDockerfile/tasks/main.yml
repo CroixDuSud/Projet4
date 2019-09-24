@@ -1,0 +1,13 @@
+---
+    - name: Importation du Dockerfile
+      copy:
+        src: /home/formation/autom2/a2projet4/Dockerfile
+        dest: .
+    - name: Importation des scripts 1
+      copy:
+        src: /home/formation/autom2/a2projet4/scripts_sql
+        dest: .
+    - name: Importation des scripts 2
+      copy:
+        src: /home/formation/autom2/a2projet4/scripts_sh
+        dest: .

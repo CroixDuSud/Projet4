@@ -1,10 +1,10 @@
----
+---    
     - name: Build de l'image logicaldoc
       docker_image:
         name: logicaldoc
         build:
           args:
-          path: /root/.jenkins/workspace/Déploiement/Deploiement_LogicalDoc
+          path: .
           dockerfile: Dockerfile
           state: present
           source: build
