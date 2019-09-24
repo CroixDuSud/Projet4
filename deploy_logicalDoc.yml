@@ -1,4 +1,4 @@
-- name: deploiement de logicaldoc et mysql
+- name: deploiement de logicaldoc avec "{{ sgbd }}"
   strategy: free
   hosts: "{{ host }}"
   

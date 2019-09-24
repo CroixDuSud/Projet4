@@ -10,7 +10,6 @@
             tty: yes
             pull: yes
             hostname: ldhost
-            purge_networks: yes
             networks:
               - name: subnet1
                 ipv4_address: 10.0.0.4
