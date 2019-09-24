@@ -4,7 +4,7 @@
         name: logicaldoc
         build:
           args:
-          path: .
+          path: /root/.jenkins/workspace/Déploiement/Deploiement_LogicalDoc
           dockerfile: Dockerfile
           state: present
           source: build
