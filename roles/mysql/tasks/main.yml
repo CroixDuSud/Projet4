@@ -10,7 +10,7 @@
               MYSQL_ROOT_HOST: '%'
             tty: yes
             pull: yes
-            hostname: ldhost
+            #hostname: ldhost
             networks:
               - name: subnet1
                 ipv4_address: 10.0.0.3
