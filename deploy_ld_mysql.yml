@@ -1,9 +1,0 @@
-- name: deploiement de logicaldoc et mysql
-  strategy: free
-  hosts: vm
-  
-  roles:
-    - network
-    - "{{ sgbd }}"   #mysql
-    - exportDockerfile
-    - logicaldoc
