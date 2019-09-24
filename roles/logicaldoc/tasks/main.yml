@@ -14,7 +14,7 @@
       docker_container:
         name: ldoc
         image: logicaldoc:latest
-        ports: 8080:8080
+        ports: "{{ port }}:8080"
         state: started
         tty: yes
         pull: no
