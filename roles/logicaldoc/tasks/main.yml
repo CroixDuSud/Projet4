@@ -28,4 +28,4 @@
           POSTGRES_PASSWORD: root
         networks:
           - name: subnet1
-            #ipv4_address: 10.0.0.2
+            ipv4_address: 10.0.0.2

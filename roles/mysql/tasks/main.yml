@@ -12,5 +12,6 @@
             pull: yes
             networks:
               - name: subnet1
+                links: "{{ mysql_container_name }}:{{ ldoc_container_name }}"
                 #ipv4_address: 10.0.0.3
             volumes: "volume_mysql:/var/lib/mysql"
