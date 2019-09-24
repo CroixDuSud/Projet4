@@ -1,7 +1,7 @@
 ---
     - name: "Deploiement de Mysql"
       docker_container:
-            name: ldhost
+            name: "{{ mysql_container_name }}"
             image: mysql:5.7
             state: started
             ports: 3306:3306
@@ -10,7 +10,6 @@
               MYSQL_ROOT_HOST: '%'
             tty: yes
             pull: yes
-            #hostname: ldhost
             networks:
               - name: subnet1
                 ipv4_address: 10.0.0.3

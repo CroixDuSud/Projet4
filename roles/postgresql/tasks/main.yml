@@ -1,7 +1,7 @@
 ---
     - name: "Deploiement de Postgres"
       docker_container:
-            name: ldhost
+            name: "{{ postgresql_container_name }}"
             image: postgres:9.6-alpine
             state: started
             ports: 5432:5432
@@ -9,7 +9,6 @@
               ENV POSTGRES_PASSWORD: root
             tty: yes
             pull: yes
-            #hostname: ldhost
             networks:
               - name: subnet1
                 ipv4_address: 10.0.0.4
