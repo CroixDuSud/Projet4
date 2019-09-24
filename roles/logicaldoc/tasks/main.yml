@@ -19,14 +19,14 @@
         tty: yes
         pull: no
         env:
-          DB_ENGINE: "{{ sgbd }}" #mysql
+          DB_ENGINE: "{{ sgbd }}"
           DB_NAME: logicaldoc
           DB_USERNAME: ldoc
           DB_USERPW: picon
           MYSQL_ROOT_PASSWORD: root
           MYSQL_ROOT_HOST: '%'
           POSTGRES_PASSWORD: root
-        links: "ldhost:ldhost"
+        #links: "ldhost:ldhost"
         networks:
           - name: subnet1
             ipv4_address: 10.0.0.2
