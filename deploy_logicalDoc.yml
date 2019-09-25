@@ -3,6 +3,7 @@
   hosts: "{{ host }}"
   
   roles:
+    - setup_env
     - network
     - "{{ sgbd }}"
     - exportDockerfile

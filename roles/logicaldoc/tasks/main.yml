@@ -23,9 +23,9 @@
           DB_NAME: logicaldoc
           DB_USERNAME: ldoc
           DB_USERPW: picon
+          DB_HOST: "{{ db_host }}"
           MYSQL_ROOT_PASSWORD: root
           MYSQL_ROOT_HOST: '%'
           POSTGRES_PASSWORD: root
         networks:
           - name: subnet1
-            #ipv4_address: 10.0.0.2

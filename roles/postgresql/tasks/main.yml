@@ -12,5 +12,4 @@
             networks:
               - name: subnet1
                 links: "{{ postgresql_container_name }}:{{ ldoc_container_name }}"
-                #ipv4_address: 10.0.0.4
             volumes: "volume_postgres:/var/lib/postgresql"
